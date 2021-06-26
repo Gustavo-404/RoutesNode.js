@@ -1,5 +1,5 @@
 import { UserRepositories } from "../repositories/UsersRepositories"
-
+import { getCustomRepository } from "typeorm"
 interface IUserRequest {
     name: string;
     email: string;
@@ -7,7 +7,7 @@ interface IUserRequest {
 }
 class CreateUserService {
     async execute({ name, email, admin }: IUserRequest) {
-        const userRepository = new UserRepositories();
+        const userRepository = getCustomRepository(UserRepositories)
         if (!email) {
             throw new Error(" Email incorrect") //Verifica se o e-mail esta preenchido senão aciona o erro
         }
