@@ -42,13 +42,13 @@ Além disto é bom ter um editor para trabalhar com o código como [VSCode](http
 
 ```bash
 # Clone este repositório
-$ git clone <>
+$ git clone <https://github.com/Gustavo-404/RoutesNode.js.git>
 
-# Acesse a pasta do projeto no terminal/cmd
-$ cd 
+# Acesse a pasta do repositório no terminal/cmd
+$ cd RoutesNode.js
 
-# Vá para a pasta server
-$ cd 
+# Vá para a pasta do projeto
+$ cd NodeProject
 
 # Instale as dependências
 $ yarn install
@@ -58,7 +58,9 @@ $ yarn dev
 
 # O servidor inciará na porta:3000 - acesse <http://localhost:3000>
 ```
-
+É recomendado que a requisições sejam realizadas por um consumidor de API como:
+- [Insomnia](https://insomnia.rest/download). 
+- [Postman](https://www.postman.com/downloads/). 
 ## Endpoints para acesso das rotas criadas
 * ```http://localhost:3000/usersPost``` para cadastrar um novo usuario<br /> 
 estrutura do Json<br /> 
