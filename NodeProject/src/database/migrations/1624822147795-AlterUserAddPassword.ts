@@ -6,7 +6,8 @@ export class AlterUserAddPassword1624822147795 implements MigrationInterface {
         await queryRunner.addColumn("users", //Adiciona a migration users ja criada a coluna password
             new TableColumn({
                 name: "password",
-                type: "varchar"
+                type: "varchar",
+                isNullable: true
             })
         )
     }
