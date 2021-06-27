@@ -1,4 +1,4 @@
-import { getCustomRepository } from 'typeorm';
+import { getCustomRepository, NamingStrategyNotFoundError } from 'typeorm';
 import { TagsRepositories } from '../repositories/TagsRepositories';
 
 
