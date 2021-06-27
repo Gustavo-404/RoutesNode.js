@@ -8,6 +8,9 @@ interface IUserRequest {
 class CreateUserService {
     async execute({ name, email, admin }: IUserRequest) {
         const userRepository = getCustomRepository(UserRepositories)
+        if (!name) {
+            throw new Error(" Name incorrect") //Verifica se o e-mail esta preenchido senão aciona o erro
+        }
         if (!email) {
             throw new Error(" Email incorrect") //Verifica se o e-mail esta preenchido senão aciona o erro
         }
