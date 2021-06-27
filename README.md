@@ -1,5 +1,5 @@
 # RoutesNode.js
-Criação das rotas GET &amp; POST utilizando node.js
+Criação de API utilizando node.js
 
 ## Comandos utilizados para criação do projeto:
 * yarn init -y (-y porque Cria o projeto com as informações padrões)
