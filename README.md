@@ -1,46 +1,59 @@
 # RoutesNode.js
 Criação de API utilizando node.js
 
-## Comandos utilizados para criação do projeto:
-* yarn init -y (-y porque Cria o projeto com as informações padrões)
+### 🛠 Tecnologias
 
-* yarn add (instala dependecias)
+As seguintes ferramentas foram usadas na construção do projeto:
 
-* yarn add typescript -D (-D porque a dependencia irá ser usada somente p/ desenvolvimento )
+- [Node.js](https://nodejs.org/en/)
+- [TypeScript](https://www.typescriptlang.org/)
 
-* yarn tsc --init (inicializa o typescript)
+## Regras
 
-* yarn tsc (converte o ts para JavaScript)
+- Cadastro de usuário
 
-* yarn add express (adciona o express para executar as rotas)
+  - [x] Não é permitido cadastrar mais de um usuário com o mesmo e-mail
 
-* npm install express --save (intala o express para criar as rotas e recursos)
+  - [x] Não é permitido cadastrar usuário sem e-mail
 
-* yarn add @types/express -D (adciona as bibliotecas necessarias restantes)
+- Cadastro de TAG
 
-* yarn add ts-nove-dev -D (dependencia de desenvolvimento que converte ts em js)
+  - [x] Não é permitido cadastrar tag sem nome
 
-* "scripts": {
-        "dev": "ts-node-dev src/server.ts"
-    }, (adicionar esse script em package.json informando qual a clase o node-dev converte altomaticamente para js)
+  - [x] Não é permitido cadastrar mais de uma tag com o mesmo nome
 
+  - [x] Não é permitido o cadastro por usuários que não sejam administradores
 
-* app.get("/test", (request, response) => {     //CRIA UMA ROTA GET /TEST
-    // REQUEST => ENTRANDO
-    // RESPONSE => SAINDO
-    return response.send("OLÁ, MUNDO!")
-})
+- Cadastro de elogios
 
+  - [ ] Não é permitido um usuário cadastrar um elogio para si
 
-* app.post("/test-post", (request, response) => {     //CRIA UMA ROTA POST /TEST-POST
-    // REQUEST => ENTRANDO
-    // RESPONSE => SAINDO
-    return response.send("OLÁ, MUNDO!")
-})
+  - [ ] Não é permitido cadastrar elogios para usuários inválidos
+
+  - [ ] O usuário precisa estar autenticado na aplicação
 
 ## Endpoints para acesso das rotas criadas
-* ```http://localhost:3000/test``` para o verbo GET
-* ```http://localhost:3000/test-post``` para o verbo POST
+* ```http://localhost:3000/usersPost``` para cadastrar um novo usuario<br /> 
+estrutura do Json<br /> 
+{<br />
+	"name": "",<br />
+	"email": "",<br />
+	"password": "",<br />
+	"admin": false<br />
+}<br />
+
+* ```http://localhost:3000/tagsPost``` para cadastrar uma nova Tag<br />
+estrutura do Json<br />
+{<br />
+	"name": ""<br />
+}<br />
+* ```http://localhost:3000/authenticate``` para validar um login com JWT <br />
+estutura do Json<br /> 
+{<br />
+	"email": "",<br />
+	"password": ""<br />
+}
+
 
 
 
