@@ -31,6 +31,33 @@ As seguintes ferramentas foram usadas na construção do projeto:
   - [ ] Não é permitido cadastrar elogios para usuários inválidos
 
   - [ ] O usuário precisa estar autenticado na aplicação
+ 
+ ### Pré-requisitos
+
+Antes de começar, você vai precisar ter instalado em sua máquina a seguinte ferramenta:
+[Node.js](https://nodejs.org/en/). 
+Além disto é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+
+### 🎲 Rodando o Back End (servidor)
+
+```bash
+# Clone este repositório
+$ git clone <>
+
+# Acesse a pasta do projeto no terminal/cmd
+$ cd 
+
+# Vá para a pasta server
+$ cd 
+
+# Instale as dependências
+$ yarn install
+
+# Execute a aplicação em modo de desenvolvimento
+$ yarn dev
+
+# O servidor inciará na porta:3000 - acesse <http://localhost:3000>
+```
 
 ## Endpoints para acesso das rotas criadas
 * ```http://localhost:3000/usersPost``` para cadastrar um novo usuario<br /> 
